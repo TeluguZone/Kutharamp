@@ -13,22 +13,22 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'Media_search')
-API_ID = int(environ.get('API_ID', ''))
-API_HASH = environ.get('API_HASH', '')
-BOT_TOKEN = environ.get('BOT_TOKEN', "6611092598:AAE5xb7F3Re7JMqOao-e_8LnpCstycs6RGE")
+API_ID = int(environ.get('API_ID', '26068606'))
+API_HASH = environ.get('API_HASH', '14644edc9c3fa83fceb6a63af354ec35')
+BOT_TOKEN = environ.get('BOT_TOKEN', "")
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
-PICS = (environ.get('PICS', 'https://graph.org/file/98e5f589b26eac5f00a83.jpg')).split() #SAMPLE PIC
-NOR_IMG = environ.get("NOR_IMG", "https://te.legra.ph/file/a27dc8fe434e6b846b0f8.jpg")
+PICS = (environ.get('PICS', 'https://graph.org/file/47ccf36e05aa60f6aebc6.jpg')).split() #SAMPLE PIC
+NOR_IMG = environ.get("NOR_IMG", "https://graph.org/file/47ccf36e05aa60f6aebc6.jpg")
 MELCOW_VID = environ.get("MELCOW_VID", "https://graph.org/file/b2af355932abb7f66fb13.mp4")
-SPELL_IMG = environ.get("SPELL_IMG", "https://te.legra.ph/file/15c1ad448dfe472a5cbb8.jpg")
+SPELL_IMG = environ.get("SPELL_IMG", "https://graph.org/file/47ccf36e05aa60f6aebc6.jpg")
 DPIC = (environ.get("DPIC", "https://graph.org/file/66dd5fd498f7ed107f64f.jpg")).split() 
-HPIC = (environ.get("HPIC", "https://graph.org/file/cca952e9407fbb0cfa738.jpg")).split()
+HPIC = (environ.get("HPIC", "https://graph.org/file/47ccf36e05aa60f6aebc6.jpg")).split()
 # Admins, Channels & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '809614790').split()]
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '809614790 5753303670').split()]
 CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
@@ -44,25 +44,25 @@ SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False))
 
 # MongoDB information
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://Banana:cucumber@cluster0.f7zmcxp.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://parcel:malliga@cluster0.xoax6ur.mongodb.net/?retryWrites=true&w=majority")
 DATABASE_NAME = environ.get('DATABASE_NAME', "cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
 VERIFY = bool(environ.get('VERIFY', False))
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'shareus.io')
-SHORTLINK_API = environ.get('SHORTLINK_API', '1UlFNft9nPcFjIYOQmQDzyiw4Uj2')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', '')
+SHORTLINK_API = environ.get('SHORTLINK_API', '')
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK',False))
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "5")
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 PORT = environ.get("PORT", "8080")
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+y3URnRGyizQ3MmM1')
-CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/TeluguZone0')
-TUTORIAL = environ.get('TUTORIAL', 'https://t.me/TeluguZone0')
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/+LIYcBEE6vd5hNTBl')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/Bsrips')
+TUTORIAL = environ.get('TUTORIAL', 'https://t.me/Bsrips')
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
-MSG_ALRT = environ.get('MSG_ALRT', 'HEY CHECK OUT @TeluguZone0')
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001902166167'))
+MSG_ALRT = environ.get('MSG_ALRT', 'HEY CHECK OUT @BSRIPS')
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1001873195228'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'kalai_supportgroup')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
 IMDB = is_enabled((environ.get('IMDB', "False")), False)
